@@ -14,7 +14,7 @@ All Sub Category - single Ecom
                           <tr>
                             <th>Id</th>
                             <th>Sub Category Name</th>
-                            <th>Slug</th>
+                            <th>Category</th>
                             <th>Product</th>
                             <th>Actions</th>
                           </tr>
@@ -22,8 +22,8 @@ All Sub Category - single Ecom
                         <tbody class="table-border-bottom-0">
                           <tr>
                                 <td>1</td>
+                                <td>Fan</td>
                                 <td>Electronics</td>
-                                <td>10</td>
                                 <td>100</td>
                                 <td>
                                     <a href="" class="btn btn-primary">Edit</a>
