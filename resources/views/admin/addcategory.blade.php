@@ -23,7 +23,7 @@ Add Category - single Ecom
          
           <div class="row justify-content-end">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary"></button>
+              <button type="submit" class="btn btn-primary">Add Category</button>
             </div>
           </div>
         </form>
