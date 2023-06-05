@@ -8,6 +8,11 @@ All Category - single Ecom
                   <!-- Bootstrap Table with Header - Light -->
                   <div class="card">
                     <h5 class="card-header">Available Category Information</h5>
+                    @if(session()->has('message'))
+               <div class="alert alert-success">
+              {{ session()->has('message') }}
+               </div>
+                    @endif
                     <div class="table-responsive text-nowrap">
                       <table class="table">
                         <thead class="table-light">
