@@ -15,4 +15,9 @@ class CategoryController extends Controller
     public function AddCategory(){
         return view('admin.addcategory');
     }
+    public function StoreCategory(Request $request){
+        $request->validate([
+         'category_name' => 'required|unique:categories'
+        ]);
+    }
 }
