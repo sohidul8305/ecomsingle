@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function index(){
-        $categoris = Category::latest()->get();
+        $categories = Category::latest()->get();
         return view('admin.allcategory', compact('categories'));
     }
     public function AddCategory(){

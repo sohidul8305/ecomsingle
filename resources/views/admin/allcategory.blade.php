@@ -20,18 +20,18 @@ All Category - single Ecom
                             <th>Id</th>
                             <th>Category Name</th>
                             <th>Sub Category</th>
-                            <th>Product</th>
+                            <th>slug</th>
                             <th>Actions</th>
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
-                          @foreach ($categoris as $category)  
+                          @foreach ($categories as $category)  
                          
                           <tr>
-                                <td>1</td>
-                                <td>Electronics</td>
-                                <td>10</td>
-                                <td>100</td>
+                                <td>{{ $category->id }}</td>
+                                <td>{{ $category->category_name  }}</td>
+                                <td>{{ $category->subcategory_count }}</td>
+                                <td>{{ $category->slug }}</td>
                                 <td>
                                     <a href="" class="btn btn-primary">Edit</a>
                                     <a href="" class="btn btn-warning">Delete</a>
