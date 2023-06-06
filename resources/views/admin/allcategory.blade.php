@@ -25,6 +25,8 @@ All Category - single Ecom
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
+                          @foreach ($categoris as $category)  
+                         
                           <tr>
                                 <td>1</td>
                                 <td>Electronics</td>
@@ -35,6 +37,7 @@ All Category - single Ecom
                                     <a href="" class="btn btn-warning">Delete</a>
                                 </td>
                           </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
