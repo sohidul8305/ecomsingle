@@ -22,7 +22,7 @@ Add Category - single Ecom
         </ul>
     </div>
 @endif
-        <form action="{{ route('storcategory') }}" method="POST">
+        <form action="{{ route('storecategory') }}" method="POST">
           @csrf
        
           <div class="row mb-3">
