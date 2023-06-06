@@ -34,7 +34,7 @@ All Category - single Ecom
                                 <td>{{ $category->slug }}</td>
                                 <td>
                                     <a href="{{route('editcategory', $category->id )}}" class="btn btn-primary">Edit</a>
-                                    <a href="" class="btn btn-warning">Delete</a>
+                                    <a href="{{route('deletecategory', $category->id )}}" class="btn btn-warning">Delete</a>
                                 </td>
                           </tr>
                           @endforeach
