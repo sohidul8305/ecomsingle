@@ -33,7 +33,7 @@ All Category - single Ecom
                                 <td>{{ $category->subcategory_count }}</td>
                                 <td>{{ $category->slug }}</td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Edit</a>
+                                    <a href="{{route('editcategory', $category->id )}}" class="btn btn-primary">Edit</a>
                                     <a href="" class="btn btn-warning">Delete</a>
                                 </td>
                           </tr>
