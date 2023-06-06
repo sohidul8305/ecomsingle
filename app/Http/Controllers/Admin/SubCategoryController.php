@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class SubCategoryController extends Controller
 {
@@ -11,6 +12,7 @@ class SubCategoryController extends Controller
         return view('admin.allsubcategory');
     }
     public function AddSubCategory(){
-        return view('admin.addsubcategory');
+        $categories = Category::latest()->get();
+        return view('admin.addsubcategory', compact('categories'));
     }
 }
