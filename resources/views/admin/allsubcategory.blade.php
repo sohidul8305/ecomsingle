@@ -6,6 +6,11 @@ All Sub Category - single Ecom
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">page/</span>All Sub Category</h4>
                   <!-- Bootstrap Table with Header - Light -->
+                  @if(session()->has('message'))
+                  <div class="alert alert-success">
+                 {{ session()->get('message') }}
+                  </div>
+                       @endif
                   <div class="card">
                     <h5 class="card-header">Available Sub category Information</h5>
                     <div class="table-responsive text-nowrap">
@@ -21,14 +26,16 @@ All Sub Category - single Ecom
                         </thead>
                         <tbody class="table-border-bottom-0">
                           <tr>
-                                <td>1</td>
-                                <td>Fan</td>
-                                <td>Electronics</td>
-                                <td>100</td>
+                            @foreach ($allsubcategories as $subcategory )
+                                <td>{{$subcategory->id}}</td>
+                                <td>{{$subcategory->subcategory_name}}</td>
+                                <td>{{$subcategory->category_name}}</td>
+                                <td>{{$subcategory->product_count }}</td>
                                 <td>
                                     <a href="" class="btn btn-primary">Edit</a>
                                     <a href="" class="btn btn-warning">Delete</a>
                                 </td>
+                                @endforeach
                           </tr>
                         </tbody>
                       </table>
