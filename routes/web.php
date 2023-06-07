@@ -50,6 +50,8 @@ Route::controller(SubCategoryController::class)->group(function(){
     Route::get('/admin/all-subcategory', 'index')->name('allsubcategory');
     Route::get('/admin/addsub-category', 'AddSubCategory')->name('addsubcategory');
     Route::post('/admin/store-subcategory','StoreSubcategory')->name('storesubcategory');
+    Route::get('/admin/edit_category/{id}','EditSubCat')->name('editsubcat');
+    Route::get('/admin/delete_category/{id}','DeleteSubCat')->name('deletesubcat');
 
 });
 Route::controller(ProductController::class)->group(function(){

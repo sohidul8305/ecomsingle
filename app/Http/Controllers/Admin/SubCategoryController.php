@@ -15,7 +15,7 @@ class SubCategoryController extends Controller
     }
     public function AddSubCategory(){
         $categories = Category::latest()->get();
-        return view('admin.addsubcategory', compact('categories'));
+        return view('admin.addsubcategory', compact('allsubcategories'));
     }
     public function StoreSubCategory(Request $request){
         $request->validate([
@@ -35,4 +35,8 @@ class SubCategoryController extends Controller
         Category::where('id', $category_id)->increment('subcategory_count',1);
         return redirect()->route('allsubcategory')->with('message','Sub Category Added Successfully!');
     }
+    public function EditSubcat($id){
+        $subcatinfo = SubCategory::findOrFail($id);
+        return view('admin.editsubcat', compact('subcatinfo'));
+     }
 }
