@@ -25,8 +25,8 @@ All Sub Category - single Ecom
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
-                          <tr>
                             @foreach ($allsubcategories as $subcategory )
+                            <tr>
                                 <td>{{$subcategory->id}}</td>
                                 <td>{{$subcategory->subcategory_name}}</td>
                                 <td>{{$subcategory->category_name}}</td>
@@ -35,8 +35,8 @@ All Sub Category - single Ecom
                                     <a href="{{ route('editsubcat',$subcategory->id) }}" class="btn btn-primary">Edit</a>
                                     <a href="{{ route('deletesubcat',$subcategory->id) }}" class="btn btn-warning">Delete</a>
                                 </td>
-                                @endforeach
                           </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
