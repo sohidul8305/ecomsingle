@@ -26,7 +26,7 @@ class CategoryController extends Controller
             'category_name' =>$request->category_name,
             'slug' =>strtolower(str_replace('','-', $request->category_name))
         ]);
-        return redirect()->route('allcategory')->with('message','Category Added Successfully!');
+  return redirect()->route('allcategory')->with('message','Category Added Successfully!');      
 
     }
     public function EditCategory($id){
