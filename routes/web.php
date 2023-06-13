@@ -55,6 +55,7 @@
             Route::get('/admin/add-product', 'AddProduct')->name('addproduct');
             Route::post('/admin/store-product','StoreProduct')->name('storeproduct');
             Route::get('/admin/edit-product-img/{id}','EditProductImg')->name('editproductimg');
+            Route::post('/admin/update-product-img','UpdateProductImg')->name('updateproductimg');
         });
         Route::controller(OrderController::class)->group(function () {
             Route::get('/admin/pending-order', 'index')->name('pendingorder');
