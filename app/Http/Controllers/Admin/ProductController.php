@@ -11,8 +11,8 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index()
-    {
-        return view('admin.allproduct');
+    {   $products =  Product::latest()->get();
+        return view('admin.allproduct', compact('products'));
     }
 
     public function AddProduct()
