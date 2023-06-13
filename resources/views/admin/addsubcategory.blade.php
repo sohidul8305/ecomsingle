@@ -30,7 +30,7 @@ Add Sub Category - single Ecom
             <label class="col-sm-2 col-form-label" for="basic-default-name"> Select Category</label>
             <div class="col-sm-10">
                 <select class="form-select" id="category" name="category_id" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                    <option selected>Select Category</option>
                     @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{$category->category_name}}</option>
                     @endforeach
