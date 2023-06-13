@@ -63,4 +63,10 @@ class ProductController extends Controller
         SubCategory::where('id', $subcategory_id)->increment('product_count', 1);
         return redirect()->route('allproducts')->with('message', 'Product Added Successfully!');
     }
+
+    public function EditProductImg($id){
+        $productinfo = Product::findOrFail($id);
+        return view('admin.editproductimg', compact('productinfo'));
+
+    }
 }

@@ -32,7 +32,7 @@ All product - single Ecom
                                 <td>
                                   <img style="height: 100px;" src="{{asset($product->product_img)}}" alt="">
                                   <br>
-                                  <a href="" class="btn btn-primary">Update Image</a>
+                                  <a href="{{route('editproductimg', $product->id)}}" class="btn btn-primary">Update Image</a>
                                 </td>
                                 <td>{{$product->price}}</td>
                                 <td>
