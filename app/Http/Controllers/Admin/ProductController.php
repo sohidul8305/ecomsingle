@@ -35,7 +35,6 @@ class ProductController extends Controller
             'product_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-
         $image = $request->file('product_img');
         $img_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
         $request->product_img->move(public_path('upload'), $img_name);
@@ -54,7 +53,8 @@ class ProductController extends Controller
             'product_category_name' => $category_name,
             'product_subcategory_name' => $subcategory_name,
             'product_category_id' => $request->product_category_id,
-            'product_img ' => $img_url,
+            'product_subcategory_id' => $request->product_subcategory_id,
+            'product_img' => $img_url,
             'quantity' => $request->quantity,
             'slug' => strtolower(str_replace('', '-', $request->product_name)),
         ]);
