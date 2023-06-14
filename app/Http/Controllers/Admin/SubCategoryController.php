@@ -53,7 +53,7 @@ class SubCategoryController extends Controller
      }
 
      public function DeleteSubCat($id,){
-        $cat_id= SubCategory::where('id',)->value('category_id');
+        $cat_id= SubCategory::where('id', $id)->value('category_id');
      SubCategory::findOrFail($id)->delete();
 
      Category::where('id', $cat_id)->decrement('subcategory_count', 1);
