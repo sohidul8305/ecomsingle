@@ -1,6 +1,7 @@
  <?php
 
     use App\Http\Controllers\Admin\ProductController;
+    use App\Http\Controllers\Admin\HomeController;
     use App\Http\Controllers\Admin\OrderController;
     use App\Http\Controllers\Admin\SubCategoryController;
     use App\Http\Controllers\Admin\CategoryController;
@@ -19,10 +20,10 @@
     |
     */
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
 
+    Route::controller(HomeController::class)->group(function (){
+      Route::get('/', 'Index')->name('Home');
+    });
 
 
     Route::get('/dashboard', function () {
