@@ -1,4 +1,7 @@
+@extends('user_template.layouts.template')
+@section('main-content')
       <!-- fashion section start -->
+      <h2 class="py-5">HomePage</h2>
       <div class="fashion_section">
         <div id="main_slider" class="carousel slide" data-ride="carousel">
            <div class="carousel-inner">
@@ -421,3 +424,4 @@
         </div>
      </div>
      <!-- jewellery  section end -->
+@endsection
