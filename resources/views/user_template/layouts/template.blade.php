@@ -134,7 +134,7 @@
       </div>
       <!-- banner bg main end -->
       <!-- Common Part -->
-      <div class="container py-5">
+      <div class="container py-5" style="margin-top: 200px;">
          @yield('main-content')
       </div>
       <!-- End of Common Part -->
