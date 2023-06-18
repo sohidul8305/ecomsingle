@@ -20,7 +20,7 @@ class ClientController extends Controller
         return view('user_template.checkout');
     }
     public function UserProfile(){
-        return view('user_template.user');
+        return view('user_template.userprofile');
     }
     public function NewRelease(){
         return view('user_template.newrelease');
