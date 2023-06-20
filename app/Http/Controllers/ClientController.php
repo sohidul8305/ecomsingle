@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class ClientController extends Controller
 {
     public function CategoryPage($id){
-        $products = Product::where('product_category_id');
+        $products = Product::where('product_category_id', $id)->latest()->get();
         $category = Category::findOrFail($id);
-        return view('user_template.category', compact('category'));
+        return view('user_template.category', compact('category', 'products'));
     }
     public function SingleProduct(){
         return view('user_template.product');
