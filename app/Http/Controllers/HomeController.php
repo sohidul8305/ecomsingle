@@ -14,3 +14,4 @@ class HomeController extends Controller
         return view('user_template.layouts.home', compact('allproducts'));
     }
 }
+?>
