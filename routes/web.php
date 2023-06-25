@@ -29,18 +29,14 @@
     Route::controller(ClientController::class)->group(function (){
         Route::get('/category/{id}/{slug}', 'CategoryPage')->name('category');
         Route::get('/product-details/{id}/{slug}', 'SingleProduct')->name('singleproduct');
-        Route::get('/add-to-cart', 'AddToCart')->name('addtocart');
-        Route::get('/checkout', 'Checkout')->name('checkout');
-        Route::get('/user-profile', 'UserProfile')->name('userprofile');
         Route::get('/new-release', 'NewRelease')->name('newrelese');
-        Route::get('/todays-deal', 'TodaysDeal')->name('todaysdeal');
-        Route::get('/custom-service', 'CustomerService')->name('customerservice');
       });
 
 
       Route::middleware(['auth','role:admin'])->group(function(){
         Route::controller(ClientController::class)->group(function (){
             Route::get('/add-to-cart', 'AddToCart')->name('addtocart');
+            Route::post('/add-product-to-cart/{id}', 'AddProductToCart')->name('addproducttocart');
             Route::get('/checkout', 'Checkout')->name('checkout');
             Route::get('/user-profile', 'UserProfile')->name('userprofile');
             Route::get('/user-profile/pending-orders','PendingOrders')->name('pendingorders');
