@@ -37,12 +37,17 @@
         Route::controller(ClientController::class)->group(function (){
             Route::get('/add-to-cart', 'AddToCart')->name('addtocart');
             Route::post('/add-product-to-cart/{id}', 'AddProductToCart')->name('addproducttocart');
+            Route::get('/shipping-address', 'GetShippingAddress')->name('shippingaddress');
+            Route::post('/add-shipping-address', 'AddShippingAddress')->name('addshippingaddress');
+            Route::post('/place-order', 'PlaceOrder')->name('placeorder');
             Route::get('/checkout', 'Checkout')->name('checkout');
             Route::get('/user-profile', 'UserProfile')->name('userprofile');
             Route::get('/user-profile/pending-orders','PendingOrders')->name('pendingorders');
             Route::get('/user-profile/history','History')->name('history');
             Route::get('/todays-deal', 'TodaysDeal')->name('todaysdeal');
             Route::get('/custom-service', 'CustomerService')->name('customerservice');
+            Route::get('/remove-cart-item/{id}', 'RemoveCartItem')->name('removeitem');
+
         });
     });
 
@@ -61,9 +66,9 @@
             Route::get('/admin/all-category', 'index')->name('allcategory');
             Route::get('/admin/add-category', 'AddCategory')->name('addcategory');
             Route::post('/admin/store-category', 'storeCategory')->name('storecategory');
-            Route::get('/admin/edit-category{id}', 'EditCategory')->name('editcategory');
+            Route::get('/admin/edit-category/{id}', 'EditCategory')->name('editcategory');
             Route::post('/admin/update-category', 'updateCategory')->name('updatecategory');
-            Route::get('/admin/delete-category{id}', 'DeleteCategory')->name('deletecategory');
+            Route::get('/admin/delete-category/{id}', 'DeleteCategory')->name('deletecategory');
         });
         Route::controller(SubCategoryController::class)->group(function () {
             Route::get('/admin/all-subcategory', 'index')->name('allsubcategory');
